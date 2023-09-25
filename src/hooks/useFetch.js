@@ -18,7 +18,7 @@ const useFetch = (url) => {
       setLoading(false);
     };
     fetchData();
-  }, [0]);
+  }, [url]);
 
   const reFetch = async () => {
     setLoading(true);
@@ -32,7 +32,7 @@ const useFetch = (url) => {
     setLoading(false);
   };
 
-  return { data, loading, error };
+  return { data, loading, error, reFetch };
 };
 
 export default useFetch;
